@@ -1,0 +1,96 @@
+<!-- 5. Для задания 3 создать метод, позволяющий отсортировать массив сотрудников по одному из свойств: name, sName, age, occupation, salary.
+       Параметр для сортировки принимается от пользователя.
+       После выполнения функции — вывести информацию о сотрудниках. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_5_Poiarko</title>
+</head>
+
+<body>
+    <script>
+        var employees = []
+        for (var i = 0; i < 3; i++) {
+
+            var workman = {
+                name: prompt("Enter first name:"),
+                sName: prompt("Enter surname:"),
+                age: prompt("Enter age:"),
+                occupation: prompt("Enter occupation:"),
+                show: function () {
+                    return ('Name: ' + this.name + ', Surname: ' + this.sName + ', age: ' + this.age + ', Occupation: ' + this.occupation)
+                }
+            }
+            employees.push(workman)
+        }
+        function pay(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                switch (arr[i].occupation) {
+                    case "director":
+                        arr[i].salary = 3000;
+                        break;
+                    case "manager":
+                        arr[i].salary = 1500;
+                        break;
+                    case "programmer":
+                        arr[i].salary = 2000;
+                        break;
+                    default:
+                        arr[i].salary = 1000;
+                }
+            }
+        };
+        pay(employees);
+        
+        var sorting = prompt("Enter category of sorting (name, sName, age, occupation, salary): ");
+        employees.sort(function(a, b) {
+            switch (sorting) {
+                case "name":
+                    if (a["name"] > b["name"]) {
+                        return 1;
+                    }
+                    else if (a["name"] < b["name"]) {
+                        return -1;
+                    } else {return 0;}
+                    break;
+                case "sName":
+                    if (a["sName"] > b["sName"]) {
+                        return 1;
+                    }
+                    else if (a["sName"] < b["sName"]) {
+                        return -1;
+                    } else {return 0;}
+                    break;
+                case "age":
+                    return a["age"] - b["age"];
+                    break;
+                case "occupation":
+                    if (a["occupation"] > b["occupation"]) {
+                        return 1;
+                    }
+                    else if (a["occupation"] < b["occupation"]) {
+                        return -1;
+                    } else {return 0;}
+                    break;
+                case "salary":
+                    return a["salary"] - b["salary"];
+                    break;
+                default:
+                    alert("None");
+            }
+        })
+
+        for (var i = 0; i < employees.length; i++) {
+            document.write('Name: ' + employees[i].name + '<br>' + 'Surname: ' + employees[i].sName + '<br>' + 'Age: ' + employees[i].age + '<br>' + 'Occupation: ' + employees[i].occupation + '<br>' + "Salary: " + employees[i].salary + '<br>' + '<br>')
+        }
+
+    </script>
+</body>
+
+</html>

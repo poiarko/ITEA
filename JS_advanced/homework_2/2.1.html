@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework_2.1</title>
+</head>
+
+<body>
+
+    <div class="container" style="border:1px solid gray;"></div>
+    <button class="btn" style="cursor:pointer">Add block</button>
+
+    <script>
+
+        let button = document.querySelector(".btn");
+
+        let box = document.querySelector(".container");
+        button.onclick = () => {
+            let element = document.createElement("div");
+            element.setAttribute("style", "color:green;");
+            element.innerText = "Block added";
+            box.appendChild(element);
+        }
+
+    </script>
+</body>
+
+</html>

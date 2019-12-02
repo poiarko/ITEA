@@ -1,0 +1,54 @@
+<!-- 2. Создать объект Calculator, который должен содержать методы для расчета суммы, разности, произведения и частного двух чисел.
+       Протестировать данный объект, принимая от пользователя значения двух операндов и знак операции.
+       В зависимости от принятого знака операции, вызвать соответствующий метод.
+<!DOCTYPE html> -->
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_5_Poiarko</title>
+</head>
+
+<body>
+    <script>
+
+        var n1 = +prompt("Введите операнд 1:");
+        var symbol = prompt("Введите знак");
+        var n2 = +prompt("Введите операнд 2:");
+
+
+        var calc = {
+            op1: n1,
+            op2: n2,
+            sign: symbol,
+            sum: function () {
+                return this.op1 + this.op2
+            },
+            sub: function () {
+                return this.op1 - this.op2
+            },
+            mul: function () {
+                return this.op1 * this.op2
+            },
+            div: function () {
+                return this.op1 / this.op2
+            },
+            result: function () {
+                if (this.sign === "+") {
+                    return this.sum()
+                } else if (this.sign === "-") 
+                    return this.sub()
+                 else if (this.sign === "*") 
+                    return this.mul();
+                 else if (this.sign === "/") 
+                    return this.div();
+            }
+        }
+            alert(calc.result())
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.1 Intermediate Algorithm Scripting: Sum All Numbers in a Range
+
+        function sumAll(arr) {
+            arr.sort((a, b) => a - b);
+
+            var min = arr[0];
+            var max = arr[1];
+            var sum = 0;
+
+            for (var i = min; i <= max; i++) {
+
+                sum += i;
+
+            }
+            return sum;
+        }
+        sumAll([4, 1])
+
+
+        // 1.2 
+
+        function sumAll(arr) {
+            arr.sort((a, b) => a - b);
+
+            var min = arr[0];
+            var max = arr[1];
+            var resultArr = [];
+
+            for (var i = min; i <= max; i++) {
+                resultArr.push(i)
+            }
+
+            return resultArr.reduce(function(a, b) {
+                return a + b;
+
+            });
+        }
+
+        sumAll([1, 4])
+
+
+        // 2. Intermediate Algorithm Scripting: Diff Two Arrays
+
+        function diffArray(arr1, arr2) {
+
+            var filteredArr1 = arr1.filter(n => arr2.indexOf(n) === -1),
+                filteredArr2 = arr2.filter(n => arr1.indexOf(n) === -1);
+
+            return filteredArr1.concat(filteredArr2);
+        }
+
+        diffArray(["andesite", "grass", "dirt", "pink wool", "dead shrub"], ["diorite", "andesite", "grass", "dirt", "dead shrub"]);
+
+
+        // 3. Intermediate Algorithm Scripting: Seek and Destroy
+
+        function destroyer(arr) {
+            var args = [...arguments];
+            args.splice(0, 1);
+
+            return arr.filter(function(value) {
+                return args.indexOf(value) === -1;
+            });
+        }
+        destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3);
+    </script>
+</body>
+
+</html>

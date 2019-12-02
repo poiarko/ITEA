@@ -1,0 +1,23 @@
+<!-- бонус: для решения использовать не цикл, а рекурсию -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_3_Poiarko</title>
+</head>
+
+<body>
+    <script>
+        var n = prompt("Введите n:");
+        function fib(n) {
+            return n <= 1 ? n : fib(n - 1) + fib(n - 2);
+        }
+        alert(fib(n));
+    </script>
+</body>
+
+</html>

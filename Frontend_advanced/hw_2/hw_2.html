@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var str = "2716";
+        var arr = str.split("");
+
+        function sortArray(arr) {
+            let length = arr.length;
+            for (var i = 0; i < length - 1; i++) {
+                var max = i;
+                for (var j = i + 1; j < length; j++) {
+                    if (arr[j] > arr[max]) {
+                        max = j
+                    }
+                }
+                var maxNum = arr[max];
+                arr[max] = arr[i];
+                arr[i] = maxNum;
+                // arr[i] = arr[max]
+            }
+            return arr.join("");
+        }
+
+        console.log(sortArray(arr));
+
+
+
+
+        // // 1.1 Basic Algorithm Scripting: Factorialize a Number
+
+        // function factorial(n) {
+        //     return (n != 0) ? n * factorial(n - 1) : 1;
+        // }
+        // console.log(factorial(5));
+
+
+        // // 1.2 
+
+        // function factorial(n) {
+        //     var res = 1;
+
+        //     while (n--)
+        //         res *= n + 1
+
+        //     return res;
+        // }
+
+        // console.log(factorial(5));
+
+
+
+
+
+
+        // // 2. Basic Algorithm Scripting: Find the Longest Word in a String
+
+        //         function findLongestWord(str) {
+        //             var words = str.split(' ');
+        //             console.log(words);
+        //             var len = 0;
+
+        //             words.forEach(function(word) {
+        //                 if (word.length > len) {
+        //                     len = word.length;
+        //                 }
+        //             });
+
+        //             return len;
+        //             // return str.length;
+        //         }
+        //         console.log(findLongestWord("The quick brown fox jumped over the lazy dog"));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!-- 1. Создать функцию calculate(operand1, operand2, sign), где operand1 и operand2 — два числа, sign — знак арифметической операции.
+Функция должна расчитывать результат операции, исходя из переданного ей знака.
+Функция должна проверять корректность введенных чисел и знака операции.
+Все аргументы для функции принять от пользователя. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_3_Poiarko</title>
+</head>
+
+<body>
+    <script>
+        var operand1, operand2, sign, result;
+        operand1 = +prompt("Введите операнд 1");
+        sign = prompt("Введите знак");
+        operand2 = +prompt("Введите операнд 2");
+        
+        calculate(operand1, operand2, sign);
+
+        function calculate(operand1, operand2, sign) {
+            var result;
+            switch (sign) {
+                case "+": {
+                    result = operand1 + operand2;
+                    break;
+                }
+                case "-": {
+                    result = operand1 - operand2;
+                    break;
+                }
+                case "*": {
+                    result = operand1 * operand2;
+                    break;
+                }
+                case "/": {
+                    result = operand1 / operand2;
+                    break;
+                }
+                default:
+                    document.write("<p><b style='color:red'>" + sign + "</b> - не является знаком арифметической операции.</p>");
+            }
+            if (result != undefined) {
+                document.write("Результат операции: " + result);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!-- 1. Создать объект Point, содержащий два свойства: "x" и "y" — координаты точки, и метод GetQuadrant, вычисляющий,
+       в каком квадранте в декартовой системе координат находится данная точка.
+       Протестируйте данный объект, изменяя значения его координат, и повторно вызавая метод GetQuadrant. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_5_Poiarko</title>
+</head>
+
+<body>
+    <script>
+        var n1 = +prompt("Введите x:");
+        var n2 = +prompt("Введите y:");
+        var point = {
+            x: n1,
+            y: n2,
+        }
+        var GetQuadrant = function (x, y) {
+            if (point.x > 0 && point.y > 0) {
+                alert("Точка находится в 1 квадранте");
+            } else if (point.x > 0 && point.y < 0) {
+                alert("Точка находится во 2 квадранте");
+            } else if (point.x < 0 && point.y > 0) {
+                alert("Точка находится в 3 квадранте");
+            } else if (point.x < 0 && point.y < 0) {
+                alert("Точка находится в 4 квадранте");
+            }
+        }
+        GetQuadrant();
+
+    </script>
+</body>
+
+</html>

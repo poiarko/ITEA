@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework_2.2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <form method="POST">
+            <div id="email_div">
+                <input type="email" name="email" class="textInput" placeholder="E-mail" id="email">
+            </div>
+            <div id="password_div">
+                <input type="password" name="password" class="textInput" placeholder="Password">
+            </div>
+            <div id="pass_confirm_div"></div>
+            <div>
+                <input type="submit" name="register" value="Registration" class="btn" onclick="registration()">
+                <input type="submit" name="enter" value="Login" class="btn" onclick="hideConfirm()">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        
+        function registration() {
+            event.preventDefault();
+
+            let input = document.createElement("input");
+
+            input.setAttribute('id', 'password_confirm');
+            input.setAttribute('type', 'password');
+            input.setAttribute('placeholder', 'Password confirm');
+            input.setAttribute('class', "textInput");
+
+            let parent = document.getElementById("pass_confirm_div");
+            parent.insertBefore(input, parent.firstChild);
+            let div = document.getElementById("pass_confirm_div");
+            if (div.hasChildNodes()) {
+                div.removeChild(div.childNodes[1]);
+            }
+        };
+
+
+        function hideConfirm() {
+            let elem = document.querySelector("div.pass_confirm_div");
+            elem.remove();
+        }
+
+    </script>
+
+</body>
+
+</html>

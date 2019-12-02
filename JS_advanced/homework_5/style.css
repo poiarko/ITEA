@@ -1,0 +1,98 @@
+body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    min-height: 70vh;
+}
+
+.box-category {
+    float: left;
+    min-height: 95vh;  
+    width: 15%;
+    /* box-shadow: 2px 0px 15px rgba(0, 0, 0, .2); */
+}
+
+.categories {
+    width: 100%;
+    height: 20px;
+    border-top: 1px solid #000;
+    background: rgb(214, 210, 212);
+    margin-top: 60px;
+    cursor: pointer;
+    text-align: center;
+}
+.number {
+    display: block;
+    margin: 10px 10px;
+    font-size: 14px;
+}
+#data {
+    /* margin-left: 20px; */
+    /* width: 96%; */
+    
+}
+#btns {
+    /* float: left; */
+    /* min-width: 100%; */
+    text-align: center; 
+    clear: both;
+}
+.numBtn {
+    font-size: 15px;
+    margin: 5px 5px;
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+.numBtn:hover {
+    background: #000;
+    color: #fff;
+}
+#sort {
+    line-height: 50vh;
+    margin: 0px 8px;
+}
+#countPerPage {
+    margin: auto 0px;
+}
+img {
+    max-width: 90%;
+    display: block; 
+    /* height: 110px; */
+    margin: 20px auto;
+}
+.goods-card {
+    height: 450px;
+    width: 15%;
+    margin: 20px 1.5%;
+    border: 1px solid #c0c0c0;
+    float: left;
+    padding: 20px;
+    border-radius: 5px;
+}
+.goods-card h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    height: 32px;
+    font-weight: bold;
+}
+.goods-card p {
+    font-size: 14px;    
+}
+.goods-card h5 {
+    text-align: center;
+}
+.goods-card button {
+    display: block;
+    margin: 20px auto;
+    background: #00a046;
+    border-radius: 4px;
+    padding: 5px 10px;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

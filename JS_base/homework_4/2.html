@@ -1,0 +1,36 @@
+<!-- 2. Создать функцию для нахождения минимального и максимального элемента массива getMinAndMax(array).
+     Результат должен выводиться в консоль. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_4_Poiarko</title>
+</head>
+
+<body>
+    <script>
+
+        var numArray = [1, 3, 5, 2, 8, 19, 99, 11, 14, -7, 0, 42, -12, 18, -4];
+
+        var newArr = numArray.sort(function (a, b) { return a - b; });
+        console.log("Минимальный элемент массива: " + newArr[0] + "\n" + "Максимальный элемент массива: " + (newArr[newArr.length - 1]));
+        
+
+        // Второй способ
+
+        // function getMaxOfArray(numArray) {
+        //     return Math.max.apply(null, numArray);
+        // }
+        // function getMinOfArray(numArray) {
+        //     return Math.min.apply(null, numArray);
+        // }
+        // console.log("Максимальный элемент массива: " + getMaxOfArray(numArray) + "\n" + "Минимальный элемент массива: " + (getMinOfArray(numArray)));
+
+    </script>
+</body>
+
+</html>

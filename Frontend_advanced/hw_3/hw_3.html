@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1. Basic Algorithm Scripting: Return Largest Numbers in Arrays
+
+        function largestOfFour(arr) {
+
+            var returnArray = []
+            for (var i = 0; i < arr.length; i++) {
+                returnArray.push(Math.max.apply(Math, arr[i]));
+            }
+
+            return returnArray;
+        }
+
+        console.log(largestOfFour([
+            [17, 23, 25, 12],
+            [25, 7, 34, 48],
+            [4, -10, 18, 21],
+            [-72, -3, -17, -10]
+        ]));
+
+        // 2.1 Basic Algorithm Scripting: Confirm the Ending
+
+        function confirmEnding(str, target) {
+
+            return str.endsWith(target)
+
+        }
+        console.log(confirmEnding("Bastian", "n"));
+
+        // 2.2 
+
+        function confirmEnding(str, target) {
+
+            return str.slice(str.length - target.length) === target
+        }
+
+        console.log(confirmEnding("Bastian", "n"));
+
+
+
+
+        // 3. Basic Algorithm Scripting: Repeat a String Repeat a String
+
+        function repeatStringNumTimes(str, num) {
+            if (num <= 0) {
+                return ''
+            }
+            let repeatedString = ''
+            for (let i = 0; i < num; i++) {
+                repeatedString += str
+            }
+            return repeatedString
+        }
+
+        console.log(repeatStringNumTimes("abc", 3));
+    </script>
+</body>
+
+</html>

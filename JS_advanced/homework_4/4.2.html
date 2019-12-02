@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_4.2</title>
+</head>
+
+<body>
+
+    <script>
+        class carSalon {
+            constructor() {
+                this.cars = [];
+            }
+            Add(car) {
+                this.cars.push(car);
+            }
+            AveragePrice() {
+                let sumPrice = 0;
+                for (let i = 0; i < this.cars.length; i++) {
+                    sumPrice += this.cars[i].price;
+                }
+                let averagePrice = sumPrice / this.cars.length;
+                document.write('Average price: ' + averagePrice.toFixed(2) + ' ₴');
+            }
+        }
+        class Car {
+            constructor(price) {
+                this.price = price;
+            }
+        }
+        var salon = new carSalon();
+        salon.Add(new Car(1106340));
+        salon.Add(new Car(2270993));
+        salon.Add(new Car(3670536));
+
+        salon.AveragePrice();
+
+    </script>
+
+</body>
+
+</html>

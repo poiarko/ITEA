@@ -1,0 +1,55 @@
+<!-- с помощью document.write() вывести в окно браузера кнопки калькулятора
+примерно как на картинке
+для вывода цифр от 1 до 9 использовать цикл -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_2_Poiarko</title>
+
+    <style>
+        div {
+            width: 40px;
+            background-color: #EDEDED;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            text-align: center;
+            display: inline-block;
+            transition: 0.6s;
+            font-size: 30px;
+            cursor: pointer;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        div:hover {
+            background-color: black;
+            color: white;
+            transform: scale(1.04);
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+
+        var a = 0;
+        var b = " - ";
+        var c = " + ";
+        for (var i = 1; i < 10; i++) {
+            document.write("<div>" + i + "</div>");
+            if (i % 3 == 0) {
+                document.write("<br/>");
+            }
+        }; 
+        document.write("<div>" + a + "</div>" + "<div>" + b + "</div>" + "<div>" + c + "</div>");
+
+    </script>
+</body>
+
+</html>

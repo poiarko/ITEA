@@ -1,0 +1,41 @@
+<!-- 1. Сделать собственные примеры методов применяемых для массивов. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_4_Poiarko</title>
+</head>
+
+<body>
+
+    <!-- Получить случайное значение из массива  -->
+
+    <script>
+
+        var arr = ["Skoda", "Nissan", "BMW", "Saab", "Opel", "Volvo"];
+        var rand = Math.floor(Math.random() * arr.length);
+        alert(arr[rand]);
+
+    </script>
+
+<!-- Создать массив размерностью N элементов, элементы вводит пользователь. Вывести все элементы массива в обратном порядке.  -->
+    
+    <script>
+
+        var arr = [];
+        for (var i = 0; i < 10; i++) {
+            var el = prompt("Введите элементы массива:");
+            arr.push(el);
+        }
+        alert("Массив " + arr);
+        document.write("Элементы массива в обратном порядке: " + arr.reverse())
+
+    </script>
+
+</body>
+
+</html>

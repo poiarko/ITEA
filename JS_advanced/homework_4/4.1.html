@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_4.1</title>
+</head>
+
+<body>
+
+    <div id="clock">
+        <span>hh</span>:<span>mm</span>:<span>ss</span>
+    </div>
+
+    <script>
+        var timer;
+        function updateWatch() {
+            var clock = document.getElementById('clock');
+            var date = new Date();
+
+            var hours = date.getHours();
+            if (hours < 10) hours = '0' + hours;
+            clock.children[0].innerHTML = hours;
+
+            var minutes = date.getMinutes();
+            if (minutes < 10) minutes = '0' + minutes;
+            clock.children[1].innerHTML = minutes;
+
+            var seconds = date.getSeconds();
+            if (seconds < 10) seconds = '0' + seconds;
+            clock.children[2].innerHTML = seconds;
+        }
+
+        function startWatch() {
+            timer = setInterval(updateWatch, 1000);
+            updateWatch();
+        }
+        startWatch();
+
+    </script>
+</body>
+
+</html>

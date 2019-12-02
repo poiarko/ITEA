@@ -1,0 +1,62 @@
+<!-- 4. Для предыдущего задания создайте функцию, которая будет принимать в себя массив объектов-сотрудников, и каждому из объектов
+       будет добавлять новое свойство "salary", хранящее зарплату сотрудника. 
+       Зарплата расчитывается, исходя из значения свойства "occupation" следующим образом:
+           • "director" — 3000;
+           • "manager" — 1500;
+           • "programmer" — 2000;
+           • для остальных значений — 1000.
+       После выполнения функции — вывести информацию о сотрудниках. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_5_Poiarko</title>
+</head>
+
+<body>
+    <script>
+
+        var employees = []
+        for (var i = 0; i < 3; i++) {
+
+            var workman = {
+                name: prompt("Enter first name:"),
+                sName: prompt("Enter surname:"),
+                age: prompt("Enter age:"),
+                occupation: prompt("Enter occupation:"),
+                show: function () {
+                    return ('Name: ' + this.name + ', Surname: ' + this.sName + ', age: ' + this.age + ', Occupation: ' + this.occupation)
+                }
+            }
+            employees.push(workman)
+        }
+        function pay(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                switch (arr[i].occupation) {
+                    case "director":
+                        arr[i].salary = 3000;
+                        break;
+                    case "manager":
+                        arr[i].salary = 1500;
+                        break;
+                    case "programmer":
+                        arr[i].salary = 2000;
+                        break;
+                    default:
+                        arr[i].salary = 1000;
+                }
+            }
+        };
+        pay(employees);
+        for (var i = 0; i < employees.length; i++) {
+            document.write('Name: ' + employees[i].name + '<br>' + 'Surname: ' + employees[i].sName + '<br>' + 'Age: ' + employees[i].age + '<br>' + 'Occupation: ' + employees[i].occupation + '<br>' + "Salary: " + employees[i].salary + '<br>' + '<br>')
+        }
+
+    </script>
+</body>
+
+</html>

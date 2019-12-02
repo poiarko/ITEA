@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_4.3</title>
+</head>
+
+<body>
+    <input type="text" id="str" placeholder="enter string" onchange="calc()" /><br><br>
+    <input type="text" id="res" placeholder="result" />
+
+    <script>
+        function calc() {
+            string = document.getElementById('str').value;
+            document.getElementById('res').value = eval(string);
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Homework_3.2</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+    <!-- <style>
+        body {
+            margin: 0px;
+            font-family: Arial;
+        }
+
+        .container {
+            width: 100%;
+            min-height: 70vh;
+        }
+
+        .box-category {
+            float: left;
+            height: 200vh;
+            width: 20%;
+            box-shadow: 2px 0px 15px rgba(0, 0, 0, .2);
+        }
+
+        .categories {
+            width: 100%;
+            height: 20px;
+            border-top: 1px solid #000;
+            background: rgb(214, 210, 212);
+            margin-top: 60px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        #content {
+            float: left;
+            margin-left: 20px;
+        }
+    </style> -->
+
+    <div class="container">
+        <div class="box-category">
+            <div class="categories" onclick="showMac()" id="btnMac">Mac</div>
+            <div class="categories" onclick="showIphone()">iPhone</div>
+        </div>
+        <div id="content">
+
+        </div>
+    </div>
+
+    <script>
+    
+        var content = document.getElementById("content");
+        
+        class Mac {
+            constructor(img, model, year, price) {
+                this.im = img,
+                    this.model = model,
+                    this.year = year,
+                    this.price = price
+            }
+        }
+
+        var computers = [
+            new Mac("1", 'MacBook Pro A1278', '2008', '800$'),
+            new Mac("3", 'MacBook Pro Retina A1425 ', '2013', '1100$'),
+            new Mac("2", 'MacBook Pro A1297', '2012', '1000$'),
+            new Mac("5", 'MacBook Pro Retina A1706', '2016', '1500$'),
+            new Mac("4", 'MacBook Pro Retina A1502', '2015', '1300$'),
+            new Mac("6", 'MacBook Pro Retina A1708', '2017', '2000$'),
+        ]
+
+        function showMac() {
+
+            content.removeChild(content.firstChild);
+            var block = document.createElement("div");
+            block.setAttribute("id", "content-div");
+            content.appendChild(block);
+
+
+            for (mac of computers) {
+                block.innerHTML +=
+                    `<table>
+				<tr>
+                    <td onmouseover="mOver(this)" onmouseout="mOut(this)"><img width="150px" height="110px" src="img/${mac.im}.jpg"></td>
+					<td width="300px">${mac.model}</td>
+					<td width="100px">${mac.year}</td>
+					<td width="100px">${mac.price}</td>
+					<td>
+						<input type="button" value="&lt;" id="minus-${mac.price}" onclick="minus(this)">
+						<input type="text" size="10" value="0" id="count-${mac.price}">
+						<input type="button" value="&gt;" id="plus-${mac.price}" onclick="plus(this)">
+					</td>
+					<td>
+						<input type="button" value="Купить">
+					</td>
+				</tr>
+			</table>`
+            }
+
+        }showMac()
+
+        class Iphone {
+            constructor(img, model, year, price) {
+                this.img = img,
+                    this.model = model,
+                    this.year = year,
+                    this.price = price
+            }
+        }
+
+        var phones = [
+            new Iphone("7", 'iPhone 7', '2016', '630$'),
+            new Iphone("8", 'iPhone 8', '2017', '710$'),
+            new Iphone("9", 'iPhone X', '2018', '840$'),
+            new Iphone("10", 'iPhone XR ', '2018', '900$'),
+        ]
+
+        function showIphone() {
+
+            content.removeChild(content.firstChild);
+            var block = document.createElement("div");
+            block.setAttribute("id", "content-div");
+            content.appendChild(block);
+
+
+            for (iphone of phones) {
+                block.innerHTML +=
+                    `<table>
+				<tr>
+					<td onmouseover="mOver(this)" onmouseout="mOut(this)"><img width="150px" height="110px" src="img/${iphone.img}.jpg"></td>
+					<td width="300px">${iphone.model}</td>
+					<td width="100px">${iphone.year}</td>
+					<td width="100px">${iphone.price}</td>
+					<td>
+						<input type="button" value="&lt;" id="minus-${iphone.price}" onclick="minus(this)">
+						<input type="text" size="10" value="0" id="count-${iphone.price}">
+						<input type="button" value="&gt;" id="plus-${iphone.price}" onclick="plus(this)">
+					</td>
+					<td>
+						<input type="button" value="Купить">
+					</td>
+				</tr>
+			</table>`
+            }
+
+        }
+
+        function mOver(element) {
+            element.style.opacity = "0.7";
+            element.style.border = "1px solid black"
+        }
+
+        function mOut(element) {
+            element.style.opacity = "1";
+            element.style.border = "none"
+
+        }
+
+        function plus(el) {
+            var btnId = el.id.split("-");
+            var inputBox = document.getElementById(`count-${btnId[1]}`);
+            var countNum = +inputBox.value;
+            inputBox.value = countNum + 1;
+        }
+
+        function minus(el) {
+            var btnId = el.id.split("-");
+            var inputBox = document.getElementById(`count-${btnId[1]}`);
+            var countNum = +inputBox.value
+            if (countNum > 0)
+                inputBox.value = countNum - 1;
+            else if (countNum <= 0)
+                inputBox.value = 0;
+        }
+
+    </script>
+    <tr>
+        <td>Product</td>
+        <td>Model</td>
+    </tr>
+
+    // xhr.onload = numberProducts;
+        // xhr.onload = addProducts;
+
+
+        // class Products {
+        //     constructor(picture, name, about, year, category, price) {
+        //         this.picture = picture,
+        //             this.name = name,
+        //             this.about = about,
+        //             this.year = year,
+        //             this.category = category,
+        //             this.price = price
+        //     }
+        // }
+
+        `
+        <div id="block" width="300px">
+            <img width="150px" src="${products[i].picture}">
+            ${products[i].name}
+            ${products[i].about}
+            ${products[i].year}
+            ${products[i].category}
+            ${products[i].price} $
+            
+            </div>`
+
+
+
+
+        
+
+</body>
+
+</html>

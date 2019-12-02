@@ -1,0 +1,20 @@
+
+<!-- 5. Запросите у пользователя его возраст, после чего выведите на экран модальное окно с вопросом: "Ваш возраст ...(введеное пользователем число) лет?". Далее в зависимости от выбора пользователя выводится модальное окно с информацией true или false. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        var age = prompt("Ваш возраст?");
+        alert("Ваш возраст " +age+ " лет?");
+        var message = (age >= 18) ? "true" : "false";
+        alert(message);
+    </script>
+</body>
+</html>

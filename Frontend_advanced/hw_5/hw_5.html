@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.1 Basic Algorithm Scripting: Slice and Splice
+
+        function frankenSplice(arr1, arr2, n) {
+            var resultArr = arr2.slice();
+
+            resultArr.splice(n, 0, ...arr1);
+
+            return resultArr;
+        }
+
+        frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+
+        // 1.2 
+
+
+        function frankenSplice(arr1, arr2, n) {
+            let combinedArrays = arr2.slice()
+            for (let i = 0; i < arr1.length; i++) {
+                combinedArrays.splice(n, 0, arr1[i])
+                n++
+            }
+            return combinedArrays
+        }
+
+        frankenSplice([1, 2, 3], [4, 5, 6], 1);
+
+
+        // 2.1 Basic Algorithm Scripting: Falsy Bouncer
+
+        function bouncer(arr) {
+
+            var resultArr = [];
+
+            for (var i = 0; i < arr.length; i++) {
+                if (!!arr[i] === true) {
+                    resultArr.push(arr[i])
+                }
+            }
+            return resultArr;
+        }
+
+        bouncer([1, null, NaN, 2, undefined]);
+
+
+        // 2.2 
+
+
+        function bouncer(arr) {
+            return arr.filter(element => Boolean(element) === true)
+        }
+
+
+        // 3. Basic Algorithm Scripting: Where do I Belong
+
+
+        function getIndexToIns(arr, num) {
+
+            return arr.concat(num).sort((a, b) => a - b).indexOf(num);;
+        }
+
+        getIndexToIns([40, 60], 50);
+
+
+        // 4. Basic Algorithm Scripting: Mutations
+
+
+        function mutation(arr) {
+            var arr1 = arr[0].toLowerCase().split('');
+            var arr2 = arr[1].toLowerCase().split('');
+
+            for (var i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) === -1) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        mutation(["hello", "hey"]);
+
+
+        // 5. Basic Algorithm Scripting: Chunky Monkey
+
+
+        function chunkArrayInGroups(arr, size) {
+            var newArr = [];
+            for (var i = 0; i < arr.length; i += size) {
+                newArr.push(arr.slice(i, i + size));
+                console.log(newArr)
+            }
+            return newArr;
+        }
+
+
+        chunkArrayInGroups(["a", "b", "c", "d"], 2)
+    </script>
+</body>
+
+</html>

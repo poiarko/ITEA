@@ -1,0 +1,37 @@
+
+<!-- 3. Дано два числа A и B где (A<B). 
+Выведите на экран суму всех чисел расположенных в числовом промежутке от А до В. 
+Выведите на экран все нечетные значения, расположенные в числовом промежутке от А до В.  -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_2_Poiarko</title>
+</head>
+
+<body>
+    <script>
+        var sum = 0,
+            a = +prompt('Введите число A'),
+            b = +prompt('Введите число B. Число B должно быть больше числа А');
+        if (a >= b) {
+            document.write('Чило B должно быть больше чем число A. Повторите ввод');
+        }
+        else {
+            document.write('Все нечетные значения, расположенные в числовом промежутке от А до В: ');
+            for (var i = a; i <= b; i++) {
+                sum += i;
+                if (i % 2 === 1) {
+                    document.write(i + ' ');
+                }
+            }
+            document.write('<br>' + 'Сумма чисел в данном числовом промежутке = ' + sum);
+        }
+    </script>
+</body>
+
+</html>

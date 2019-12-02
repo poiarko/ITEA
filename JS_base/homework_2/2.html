@@ -1,0 +1,35 @@
+
+<!-- 2. Определить какое из трех, введенных пользователем, чисел максимальное и вывести его на экран. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_2_Poiarko</title>
+</head>
+
+<body>
+    <script>
+        var a, b, c;
+        a = +prompt("Введите a:");
+        b = +prompt("Введите b:");
+        c = +prompt("Введите c:");
+        if ((a > b) && (a > c)) {
+            alert(a);
+        }
+        else if ((b > a) && (b > c)) {
+            alert(b);
+        }
+        else if ((c > a) && (c > b)) {
+            alert(c);
+        }
+        else {
+            alert("Два или больше одинаковых числа");
+        }
+    </script>
+</body>
+
+</html>

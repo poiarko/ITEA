@@ -1,0 +1,44 @@
+<!-- Определить, является ли заданная строка (фраза) палиндромом
+	var s = "А РОЗА УПАЛА НА ЛАПУ АЗОРА"; // палиндром -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_4_Poiarko</title>
+</head>
+
+<body>
+    <script>
+
+// 1 способ
+
+        var s = "А РОЗА УПАЛА НА ЛАПУ АЗОРА";
+        var str = s.replace(/\s/g, '')
+        function palindrome(s) {
+            return str === str.split("").reverse().join("");
+        }
+        alert(palindrome(s));
+    
+
+// 2 способ
+
+        var s = "А РОЗА УПАЛА НА ЛАПУ АЗОРА";
+        var arr = [];
+        for (i = 0; i < s.length; i++) {
+            if (s[i] != " ") arr.push(s[i]);
+        }
+        var arr1 = arr.reverse();
+        if (arr == arr1) {
+            alert("Эта строка(фраза) является палиндромом");
+        } else {
+            alert("Эта строка(фраза) не является палиндромом");
+        }
+
+    </script>
+</body>
+
+</html>

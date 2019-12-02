@@ -1,0 +1,29 @@
+
+<!-- 1. По координатам двух точек, которые вводит пользователь, определить уравнение прямой, проходящей через эти точки.
+Общий вид уравнения: y = kx + b; где k = (y1 - y2) / (x1 - x2), b = y2 - k*x2. -->
+
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+</head>
+
+<body>
+
+<script>
+    var x,y,y1,y2,x1,x2,k,b;
+    x1 = Number(prompt("vvedite x1"));
+    y1 = Number(prompt("vvedite y1"));
+    x2 = Number(prompt("vvedite x2"));
+    y2 = Number(prompt("vvedite y2"));
+    k = (y1-y2)/(x1-x2);
+    b = y2-k*x2;
+    y = k + "x + " + b + "";
+    alert(y);
+</script>
+
+</body>
+
+</html>

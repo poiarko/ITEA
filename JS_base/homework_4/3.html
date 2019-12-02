@@ -1,0 +1,25 @@
+<!-- 3. Определить элементы массива и вывести их значения, индексы которых лежит в указанном пределе. Предел вводит пользователь. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_4_Poiarko</title>
+</head>
+
+<body>
+    <script>
+        var cars = ["Mercedes", "BMW", "Audi", "Lexus", "Honda", "Acura", "Volvo", "Jeep", "Nissan", "Porsche"];
+        var a = +prompt("Введите начало промежутка(включительно): ");
+        var b = +prompt("Введите конец промежутка(включительно): ");
+        b = b + 1; // чтобы было включительно
+        var piece = cars.slice(a, b);
+
+        document.write(piece);
+    </script>
+</body>
+
+</html>

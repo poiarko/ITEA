@@ -1,0 +1,26 @@
+<!-- 4. Отсортировать массив на 10 чисел в порядке возростания. Значения принимаются от пользователя. Сортировка осушествляется методом sort(). -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_4_Poiarko</title>
+</head>
+
+<body>
+    <script>
+        var arr1 = [];
+        for (var i = 0; i < 10; i++) {
+            var newE1 = prompt("Enter value:");
+            arr1.push(newE1);
+        }
+        arr1.sort(function (a, b) { return a - b; });
+        document.write(arr1);
+
+    </script>
+</body>
+
+</html>

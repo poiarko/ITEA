@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 8. Intermediate Algorithm Scripting: DNA Pairing
+
+
+        // function pairElement(str) {
+
+
+        //     var resultArr = [];
+
+        //     var getPaired = function (el) {
+        //         switch (el) {
+        //             case 'A':
+        //                 resultArr.push(["A", "T"]);
+        //                 break;
+        //             case 'T':
+        //                 resultArr.push(["T", "A"]);
+        //                 break;
+        //             case 'G':
+        //                 resultArr.push(["G", "C"]);
+        //                 break;
+        //             case 'C':
+        //                 resultArr.push(["C", "G"]);
+        //                 break;
+        //         }
+        //     };
+
+        //     for (var i = 0; i < str.length; i++) {
+        //         getPaired(str[i]);
+        //     }
+        //     return resultArr;
+        // }
+
+        // pairElement("TTGAG")
+
+        // 9. Intermediate Algorithm Scripting: Missing letters
+
+        // function fearNotLetter(str) {
+        //     for (var i = 0; i < str.length; i++) {
+        //         var code = str.charCodeAt(i);
+        //         if (code !== str.charCodeAt(0) + i) {
+        //             return String.fromCharCode(code - 1);
+        //         }
+        //     }
+        //     return undefined;
+        // }
+
+        // fearNotLetter("abce");
+
+        // 10. Intermediate Algorithm Scripting: Sorted Union
+
+        function uniteUnique(arr) {
+
+            var args = arguments;
+            var unique = [];
+
+            for (var i = 0; i < args.length; i += 1) {
+                for (var j = 0; j < args[i].length; j += 1) {
+
+                    if (unique.indexOf(args[i][j]) < 0) {
+                        unique.push(args[i][j])
+                    }
+                }
+console.log(unique)
+            } return unique;
+        }
+
+        uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]);
+
+        // 11. Intermediate Algorithm Scripting: Convert HTML Entities
+
+        // function convertHTML(str) {
+        //     // &colon;&rpar;
+
+        //     var arr = str.split("");
+
+
+        //     for (var i = 0; i < arr.length; i += 1) {
+        //         switch (arr[i]) {
+        //             case "<":
+        //                 arr[i] = "&lt;";
+        //                 break;
+        //             case "&":
+        //                 arr[i] = "&amp;";
+        //                 break;
+        //             case ">":
+        //                 arr[i] = "&gt;";
+        //                 break;
+        //             case '"':
+        //                 arr[i] = "&quot;";
+        //                 break;
+        //             case "'":
+        //                 arr[i] = "&apos;";
+        //                 break;
+        //         }
+        //     } 
+        //     arr = arr.join("");
+        //     return arr;
+        // }
+
+        // convertHTML("Dolce & Gabbana");
+
+
+// 12. Intermediate Algorithm Scripting: Sum All Odd Fibonacci Numbers
+
+
+    </script>
+</body>
+
+</html>

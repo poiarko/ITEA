@@ -1,0 +1,71 @@
+<!-- 3.  Создать игру "Камень-Ножницы-Бумага".
+//     Выбор компьютера определяется строкой:
+//     var computerChoice = Math.random();
+//     alert(computerChoice);
+//     Math.random() выдает произвольное число в промежутке от 0 до 1, на основании этого можно построить принцип выбора решения компьютера. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework_3_Poiarko</title>
+</head>
+
+<body>
+    <script>
+
+        var userChoice = prompt("Что Вы выбираете камень, ножницы или бумага?");
+        var computerChoice = Math.random();
+        if (computerChoice < 0.34) {
+            computerChoice = "камень";
+        } else if (computerChoice <= 0.67) {
+            computerChoice = "ножницы";
+        } else {
+            computerChoice = "бумага";
+        }
+        // alert("компьютер выбрал: " + computerChoice);
+        var choice1 = userChoice;
+        var choice2 = computerChoice;
+
+        function сompare(choice1, choice2) {
+            if (choice1 === choice2) {
+                return "Ничья";
+            }
+            if (choice1 === "камень") {
+                if (choice2 === "ножницы") {
+                    return "Камень победил"
+                }
+                else {
+                    return "Бумага победила"
+                }
+            }
+            if (choice1 === "бумага") {
+                if (choice2 === "камень") {
+                    return "Бумага победила"
+                }
+                else {
+                    return "Ножницы победили"
+                }
+            }
+            if (choice1 === "ножницы") {
+                if (choice2 === "камень") {
+                    return "Камень победил"
+                }
+                else {
+                    return "Ножницы победили"
+                }
+            }
+            if (choice1 === "") {
+                alert("Вы ничего не ввели!");
+            } else if (choice1 !== "камень", "бумага", "ножницы") {
+                alert("Нельзя выбрать это: " + choice1 + "\n" + "Вам нужно выбрать камень, ножницы или бумагу");
+            }
+        } document.write(сompare(choice1, choice2) + "<br\><br\><hr>" + "Компьютер выбрал: " + choice2);
+
+    </script>
+</body>
+
+</html>
